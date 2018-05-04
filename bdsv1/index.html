@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="./dist/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./dist/fa/css/font-awesome.css"/>
-    <link rel="stylesheet" href="./dist/swiper/css/swiper.min.css"/>
-    <link rel="stylesheet" href="./dist/main/css/main.css"/>
+    <link rel="stylesheet" href="/dist/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/dist/fa/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/dist/swiper/css/swiper.min.css"/>
+    <link rel="stylesheet" href="/dist/main/css/main.css"/>
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBdBbduzeobTy7iGqvaNHyPRcO6YH6JfY&amp;callback=initMap"></script>
     <title>Document</title>
   </head>
   <body>
@@ -17,7 +18,7 @@
         <div class="container">
           <div class="row align-items-center">                       
             <div class="col-md-6 --social">
-              <ul class="d-inline-flex">
+              <ul class="d-inline-flex none-style-list">
                 <li class="mr-1"><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li class="mr-1"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                 <li class="mr-1"><a href="#"><i class="fa fa-youtube"></i></a></li>
@@ -26,7 +27,7 @@
               </ul>
             </div>
             <div class="col-md-6 --social text-md-right">
-              <ul class="d-inline-flex text-light">
+              <ul class="d-inline-flex text-light none-style-list">
                 <li class="mr-2"><a href="/login.html"><i class="fa fa-sign-in mr-1"> </i>Login</a></li>
                 <li class="mr-2"><a href="/register.html"><i class="fa fa-registered mr-1"> </i>Register</a></li>
               </ul>
@@ -38,13 +39,13 @@
         <div class="container position-relative">
           <div class="--contact_phone_header text-uppercase font-weight-bold p-2"><span class="text-dark mr-2">Call Us Anytime [at]</span><span class="text-info">1-880-002-0088</span></div>
           <div class="row align-items-center">
-            <div class="col-md-2 --logo"><a href="/"><img src="./dist/images/logo.png" alt=""/></a></div>
+            <div class="col-md-2 --logo"><a href="/"><img src="/dist/images/logo.png" alt=""/></a></div>
             <div class="col-md-10 text-md-right">
-              <ul class="--menu_bottom d-md-inline-flex py-md-3 text-center">
+              <ul class="--menu_bottom d-md-inline-flex py-md-3 text-center none-style-list">
                 <li><a href="/">Trang chủ</a></li>
                 <li class="--js_dropdown" dropdown="dropdown"><a href="/">Bán nhà thủ đức</a>
                   <div class="--sub_drop">
-                    <ul>
+                    <ul class="none-style-list">
                       <li><a href="/">Bán nhà thủ đức</a></li>
                       <li><a href="/">Bán nhà thủ đức</a></li>
                       <li><a href="/">Bán nhà thủ đức</a></li>
@@ -65,11 +66,11 @@
         </div>
       </div>
     </header>
-    <section class="--slider">
+    <section class="--slider" slider=".slider-top" sliderThumb=".slider-thumbs">
       <div class="swiper-container slider-top">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="--slider_item"><img src="./dist/images/slide-1.jpg" alt=""/>
+            <div class="--slider_item"><img src="/dist/images/slide-1.jpg" alt=""/>
               <div class="--slider_content bg-white">
                 <h4 class="text-info">BÁN ĐẤT ĐƯỜNG 12 P. TAM BÌNH, HẺM XE HƠI 7M CÓ VỈA HÈ, DT 67M2 GIÁ 36tr/m2</h4>
                 <figure class="text-primary _address">Tam Bình</figure>
@@ -78,7 +79,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="--slider_item"><img src="./dist/images/slide-2.jpg" alt=""/>
+            <div class="--slider_item"><img src="/dist/images/slide-2.jpg" alt=""/>
               <div class="--slider_content bg-white">
                 <h4 class="text-info">BÁN ĐẤT ĐƯỜNG 12 TAM BÌNH LIỀN KỀ VÀNH ĐAI 2, GIÁ 36TR/M2 </h4>
                 <figure class="text-primary _address">Tam Bình</figure>
@@ -87,7 +88,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="--slider_item"><img src="./dist/images/slide-3.jpg" alt=""/>
+            <div class="--slider_item"><img src="/dist/images/slide-3.jpg" alt=""/>
               <div class="--slider_content bg-white">
                 <h4 class="text-info">Nhà mới toanh, CHỈ 2.8TỶ. 1T 3L, 1TUM, DT 56m2, Đường 36, Hiệp Bình Chánh - Thủ... </h4>
                 <figure class="text-primary _address">Tam Bình</figure>
@@ -96,7 +97,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="--slider_item"><img src="./dist/images/slide-1.jpg" alt=""/>
+            <div class="--slider_item"><img src="/dist/images/slide-1.jpg" alt=""/>
               <div class="--slider_content bg-white">
                 <h4 class="text-info">BÁN ĐẤT ĐƯỜNG 12 P. TAM BÌNH, HẺM XE HƠI 7M CÓ VỈA HÈ, DT 67M2 GIÁ 36tr/m2</h4>
                 <figure class="text-primary _address">Tam Bình</figure>
@@ -105,7 +106,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="--slider_item"><img src="./dist/images/slide-2.jpg" alt=""/>
+            <div class="--slider_item"><img src="/dist/images/slide-2.jpg" alt=""/>
               <div class="--slider_content bg-white">
                 <h4 class="text-info">BÁN ĐẤT ĐƯỜNG 12 TAM BÌNH LIỀN KỀ VÀNH ĐAI 2, GIÁ 36TR/M2 </h4>
                 <figure class="text-primary _address">Tam Bình</figure>
@@ -114,7 +115,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="--slider_item"><img src="./dist/images/slide-3.jpg" alt=""/>
+            <div class="--slider_item"><img src="/dist/images/slide-3.jpg" alt=""/>
               <div class="--slider_content bg-white">
                 <h4 class="text-info">Nhà mới toanh, CHỈ 2.8TỶ. 1T 3L, 1TUM, DT 56m2, Đường 36, Hiệp Bình Chánh - Thủ... </h4>
                 <figure class="text-primary _address">Tam Bình</figure>
@@ -128,12 +129,12 @@
       </div>
       <div class="swiper-container slider-thumbs bg-dark">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="./dist/images/slide-1.jpg" alt=""/></div>
-          <div class="swiper-slide"><img src="./dist/images/slide-2.jpg" alt=""/></div>
-          <div class="swiper-slide"><img src="./dist/images/slide-3.jpg" alt=""/></div>
-          <div class="swiper-slide"><img src="./dist/images/slide-1.jpg" alt=""/></div>
-          <div class="swiper-slide"><img src="./dist/images/slide-2.jpg" alt=""/></div>
-          <div class="swiper-slide"><img src="./dist/images/slide-3.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="/dist/images/slide-1.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="/dist/images/slide-2.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="/dist/images/slide-3.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="/dist/images/slide-1.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="/dist/images/slide-2.jpg" alt=""/></div>
+          <div class="swiper-slide"><img src="/dist/images/slide-3.jpg" alt=""/></div>
         </div>
       </div>
     </section>
@@ -144,7 +145,7 @@
           <div class="col-md-4 mb-2">
             <div class="--select_box bg-white" selectbox="#sell-dat">
               <div class="--select-btn">Bán đất các loại<i class="fa fa-angle-down --select_arrow"></i></div>
-              <ul class="--select_content">
+              <ul class="--select_content none-style-list">
                 <li><a href="#!" selectValue="test">Test</a></li>
                 <li><a href="#!" selectValue="test 2">Test 2</a></li>
                 <li><a href="#!" selectValue="test 3">Test 3</a></li>
@@ -157,7 +158,7 @@
           <div class="col-md-4 mb-2">
             <div class="--select_box bg-white" selectbox="#phuong">
               <div class="--select-btn">Phường<i class="fa fa-angle-down --select_arrow"></i></div>
-              <ul class="--select_content">
+              <ul class="--select_content none-style-list">
                 <li><a href="#!" selectValue="test">Test</a></li>
               </ul>
             </div>
@@ -165,7 +166,7 @@
           <div class="col-md-4 mb-2">
             <div class="--select_box bg-white" selectbox="#dientich">
               <div class="--select-btn">Diện Tích<i class="fa fa-angle-down --select_arrow"></i></div>
-              <ul class="--select_content">
+              <ul class="--select_content none-style-list">
                 <li><a href="#!" selectValue="test">Test</a></li>
               </ul>
             </div>
@@ -173,7 +174,7 @@
           <div class="col-md-4 mb-2">
             <div class="--select_box bg-white" selectbox="#pricematch">
               <div class="--select-btn">Khoảng Giá<i class="fa fa-angle-down --select_arrow"></i></div>
-              <ul class="--select_content">
+              <ul class="--select_content none-style-list">
                 <li><a href="#!" selectValue="test">Test</a></li>
               </ul>
             </div>
@@ -181,7 +182,7 @@
           <div class="col-md-4 mb-2">
             <div class="--select_box bg-white" selectbox="#project">
               <div class="--select-btn">Thuộc Dự Án<i class="fa fa-angle-down --select_arrow"></i></div>
-              <ul class="--select_content">
+              <ul class="--select_content none-style-list">
                 <li><a href="#!" selectValue="test">Test</a></li>
               </ul>
             </div>
@@ -281,13 +282,22 @@
             </div>
           </div>
         </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
       </div>
     </section>
     <footer class="bg-dark">
       <div class="container-fluid">adsadsds</div>
     </footer>
-    <script src="./dist/main/js/jquery-3.3.1.min.js"></script>
-    <script src="./dist/swiper/js/swiper.min.js"></script>
-    <script src="./dist/main/js/main.js"></script>
+    <script src="/dist/main/js/jquery-3.3.1.min.js"></script>
+    <script src="/dist/swiper/js/swiper.min.js"></script>
+    <script src="/dist/main/js/main.js"></script>
   </body>
 </html>
