@@ -45,7 +45,7 @@ $(document).ready(() => {
         let inputDate = $('[datepicker]')
         for (let val of inputDate) {
             let getID = $(val).attr('id')
-            console.log(getID)
+            // console.log(getID)
             $(`#${getID}`).datepicker();
         }
     }
@@ -53,7 +53,7 @@ $(document).ready(() => {
     if ($('[getImgHeader]').length > 0) {
         const allImgContent = $('[getImgHeader]').find('img')
         let imgUrl = '/dist/images/post-bg.jpg'
-        console.log(imgUrl.clientHeight)
+        // console.log(imgUrl.clientHeight)
         if (allImgContent.length > 0) {
             imgUrl = allImgContent[0].currentSrc;
         }
@@ -63,6 +63,12 @@ $(document).ready(() => {
                     )
 
        
+    }
+
+    if($('[dclick]').length > 0){
+        $('[dclick]').click(function(e){
+            e.preventDefault();
+        })
     }
 
     var currentID = null;
@@ -160,10 +166,18 @@ function slcBtn(target) {
             let parentThis = $(this);
             var idTarget = this.attributes[1].nodeValue
             $(this).click((e) => {
-                $(this).addClass('active')
+                let actClass = $(this).hasClass('active')
+                if(actClass){
+                    $(this).removeClass('active')
+                }else{
+                    $(this).addClass('active')
+                }
+                console.log($(target).hasClass('active'))
             })
             $(this).find('[selectcontent]').find('li a').click(function (e) {
+                controlTarget = false;
                 let currentTxt = $(this).text();
+                // $(target).removeClass('active')
                 if (currentTxt !== title) {
                     $(parentThis).find('.--select-btn').html(`
                     ${currentTxt}
@@ -172,9 +186,6 @@ function slcBtn(target) {
                 }
                 selInput(idTarget, $(this))
             })
-        },
-        function () {
-            $(this).removeClass('active')
         }
     )
 }
