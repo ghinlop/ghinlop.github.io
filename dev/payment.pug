@@ -1,0 +1,136 @@
+extends ./layout/layout
+block index
+    include ./inc/header
+    include ./inc/breaking
+    .container-fluid.py-3
+        .row.align-items-center
+            .col-md-6
+                h5.text-dark.mb-0.text-uppercase buysellkey.com - secure checkout
+                small.text-muted Please Enter your Real details bellow to complete your purchase.
+            .col-md-6.text-md-right.text-center
+                img.w-100(src="/dist/images/visa.png", alt="")
+    form(action="")
+        .container-fluid.mb-3
+            .row
+                .col-md-4
+                    .d-inline-flex.w-90.step.align-items-center.py-2.pl-5.mb-3.w-100
+                        .--number
+                            span 1
+                        h5.d-inline-block.--info.mb-0.text-white
+                            |Billing Infomation
+                    .d-block
+                        .form-group
+                            .row
+                                .col-md-6
+                                    label.text-secondary(for="f_name") First Name
+                                    small.text-danger (*)
+                                    input#f_name.form-control(type="text", name="f_name")
+                                .col-md-6
+                                    label.text-secondary(for="l_name") Last Name
+                                    small.text-danger (*)
+                                    input#l_name.form-control(type="text", name="l_name")
+                        .form-group
+                            label(for="email") Email Address
+                            small.text-danger (*)
+                            input#email.form-control(type="email", name="email")
+                        .form-group
+                            label(for="address") Address
+                            small.text-danger (*)
+                            input#address.form-control(type="text", name="address")
+                        .form-group
+                            .row
+                                .col-md-6
+                                    label.text-secondary(for="city") City
+                                    small.text-danger (*)
+                                    input#city.form-control(type="text", name="city")
+                                .col-md-6
+                                    label.text-secondary(for="pastcode") Zip/Postal Code
+                                    small.text-danger (*)
+                                    input#pastcode.form-control(type="text", name="pastcode")
+                        .form-group
+                            label.text-secondary(for="country") Country
+                            include ./mixin/country
+                        .form-group
+                            input#register-box(type="checkbox", hidden, checked)
+                            label(for="register-box") Register new account
+                .col-md-4
+                    .d-inline-flex.w-90.step.align-items-center.py-2.pl-5.mb-3.w-100
+                        .--number
+                            span 2
+                        h5.d-inline-block.--info.mb-0.text-white
+                            |Payment Methods
+                    .d-block
+                        strong.d-block.color_1 Payment Methods for Instant Delivery
+                        i.font-italic.text-muted you will get preminum instant other payment successful
+                        ul.d-block.w-100.nolist.px-3.mt-3
+                            li.mb-2
+                                input#webmoney(type="radio", name="payments", hidden, checked)
+                                label(for="webmoney")
+                                    img.icon-payment(src="/dist/images/payment/wemoney.png", alt="")
+                            li.mb-2
+                                input#pm(type="radio", name="payments", hidden)
+                                label(for="pm")
+                                    img.icon-payment(src="/dist/images/payment/pm.png", alt="")
+                            li.mb-2
+                                input#payeer(type="radio", name="payments", hidden)
+                                label(for="payeer")
+                                    img.icon-payment(src="/dist/images/payment/payeer.png", alt="")
+                            li.mb-2
+                                input#payoner(type="radio", name="payments", hidden)
+                                label(for="payoner")
+                                    img.icon-payment(src="/dist/images/payment/payoner.png", alt="")
+                            li.mb-2
+                                input#pp(type="radio", name="payments", hidden)
+                                label(for="pp")
+                                    img.icon-payment(src="/dist/images/payment/pp.png", alt="")
+                            li.mb-2
+                                input#banktransfer(type="radio", name="payments", hidden)
+                                label(for="banktransfer")
+                                    img.icon-payment(src="/dist/images/payment/banktransfer.png", alt="")
+                            li.mb-2
+                                input#cc(type="radio", name="payments", hidden)
+                                label(for="cc")
+                                    img.icon-payment(src="/dist/images/payment/cc.png", alt="")
+                .col-md-4
+                    .d-inline-flex.w-90.step.align-items-center.py-2.pl-5.mb-3.w-100.last-end
+                        .--number
+                            span 2
+                        h5.d-inline-block.--info.mb-0.text-white
+                            |Review Order
+                    table.table.table-reposive
+                        thead.bg-info.text-white
+                            tr
+                                th Product Name
+                                th Price
+                                th Qty
+                                th Sub Total
+                        tbody
+                            tr
+                                td
+                                    small FileBoom Premium 60 days
+                                td $19.99
+                                td 1
+                                td $19.99
+                            tr
+                                td
+                                    small FileBoom Premium 60 days
+                                td $19.99
+                                td 1
+                                td $19.99
+                            tr
+                                td
+                                    small FileBoom Premium 60 days
+                                td $19.99
+                                td 1
+                                td $19.99
+                        .tfoot
+                            tr
+                                td(colspan = 3).text-right Sub Total
+                                td $1,000.00
+                            tr
+                                td(colspan = 3).text-right.text-info Total
+                                td.text-info $1,000.00
+                    .d-block.text-center
+                        input#tos(type="checkbox", hidden, checked)
+                        label(for="tos") I accept the Terms & Conditions
+                    button.btn.btn-block.btn-info.btn-lg.mt-3(type="submit") Places Order

@@ -1,0 +1,61 @@
+extends ./layout/layout
+block index
+    include ./inc/header
+    include ./inc/breaking
+    .bg-light.py-3
+        .container
+            .row
+                include ./inc/nav-profile
+                .col-md-12.bg-white.py-3
+                    .row
+                        .col-md-6
+                            form(action="")
+                                .form-group
+                                    .row
+                                        .col-md-6
+                                            label.text-secondary(for="f_name") First Name
+                                            small.text-danger (*)
+                                            input#f_name.form-control(type="text", name="f_name")
+                                        .col-md-6
+                                            label.text-secondary(for="l_name") Last Name
+                                            small.text-danger (*)
+                                            input#l_name.form-control(type="text", name="l_name")
+                                    .form-group
+                                        label.text-secondary(for="email") Email Address
+                                        small.text-danger (*)
+                                        input#email.form-control(type="email", name="email")
+                                    .form-group
+                                        label.text-secondary(for="address") Address
+                                        small.text-danger (*)
+                                        input#address.form-control(type="text", name="address")
+                                    .form-group
+                                        .row
+                                            .col-md-6
+                                                label.text-secondary(for="city") City
+                                                small.text-danger (*)
+                                                input#city.form-control(type="text", name="city")
+                                            .col-md-6
+                                                label.text-secondary(for="pastcode") Zip/Postal Code
+                                                small.text-danger (*)
+                                                input#pastcode.form-control(type="text", name="pastcode")
+                                    .form-group
+                                        label.text-secondary(for="country") Country
+                                        include ./mixin/country
+                                    .form-group.text-center
+                                                button.btn.btn-info.btn-lg.mb-2 Save Profile
+                        .col-md-6
+                            form(action="")
+                                .form-group
+                                    label.text-secondary(for="oldpassword") Old Password
+                                    small.text-danger (*)
+                                    input#oldpassword.form-control(type="password", name="oldpassword")
+                                .form-group
+                                    label.text-secondary(for="password") New Password
+                                    small.text-danger (*)
+                                    input#password.form-control(type="password", name="password")
+                                .form-group
+                                    label.text-secondary(for="repassword") Re-type New Password
+                                    small.text-danger (*)
+                                    input#repassword.form-control(type="password", name="repassword")
+                                .form-group.text-center
+                                    button.btn.btn-primary.btn-lg.mb-2 Save Profile

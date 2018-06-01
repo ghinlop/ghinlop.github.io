@@ -1,0 +1,13 @@
+extends ./layout/layout
+block index
+    include ./inc/header
+    .container-fluid
+        .row
+            .col-12.order-md-1.order-3.px-0
+                include ./inc/concept
+            .col-12.order-md-2.order-1.px-0
+                include ./inc/breaking
+            .col-12.order-md-3.order-2.px-0
+                include ./inc/items 
+            .col-12.order-4.px-0
+                include ./inc/review 

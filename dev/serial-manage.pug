@@ -1,0 +1,50 @@
+extends ./layout/layout
+block index
+    include ./inc/header
+    include ./inc/breaking
+    .bg-light.py-3
+        .container
+            .alert.alert-success Credit Points "50" add successed!
+            .alert.alert-danger Can't add Credit Point!
+
+        .container.bg-white
+            .row
+                include ./inc/nav-profile
+                .col-md-6.py-3.border-bottom.border-muted
+                    h5.mb-1 Your Total License Keys Purchased: 
+                        span.text-info 41
+                #--js-table.col-md-12.px-md-0.w-100(jqueryScroll="table")
+                    table.table.table-hover
+                        thead.bg-dark
+                            tr.text-uppercase.text-light
+                                td ID Order
+                                td Product Name
+                                td.text-center Total
+                                td.text-right Date
+                                td.text-center Manage
+                        tbody
+                            - var n = 0
+                            while n < 6
+                                !=n++
+                                tr.text-info
+                                    td
+                                        a.text-success(href="#") #213321
+                                    td Microsoft Windows 10 License Keys
+                                    td.text-center=n
+                                    td.text-right 25/5/2018
+                                    td.text-center
+                                        a(href="#")
+                                            i.fa.fa-link
+                .col-md-12
+                    nav(aria-label='Page navigation example')
+                        ul.pagination
+                            li.page-item
+                                a.page-link(href='#') Previous
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-item
+                                a.page-link(href='#') 2
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') Next

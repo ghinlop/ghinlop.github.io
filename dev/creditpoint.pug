@@ -1,0 +1,87 @@
+extends ./layout/layout
+block index
+    include ./inc/header
+    include ./inc/breaking
+    .bg-light.py-3
+        .container
+            .alert.alert-success Credit Points "50" add successed!
+            .alert.alert-danger Can't add Credit Point!
+
+        .container.bg-white
+            .row
+                include ./inc/nav-profile
+                .col-md-6.py-3.border-bottom.border-muted
+                    h5.mb-1 Your Total Credit Points: 
+                    h4.text-info.align-items-center
+                        span 41 ($41.00)
+                        a.ml-2.btn.btn-sm.btn-warning.text-white Cashout
+                .col-md-6.py-3.border-bottom.border-muted
+                    form(action="")
+                        .row.align-items-center.text-md-left.text-center
+                            .col-md-4 Purchase Credit Points:
+                            .col-md-4.px-md-0
+                                input.form-control(type="number", name="")
+                            .col-md-4.mt-md-0.mt-3
+                                button.btn.btn-primary.text-uppercase(type="submit") purchase now
+                #--js-table.col-md-12.px-md-0.w-100(jqueryScroll="table")
+                    table.table.table-hover
+                        thead.bg-dark
+                            tr.text-uppercase.text-light
+                                td ID
+                                td Details
+                                td.text-center Credit Point
+                                td.text-right Date
+                        tbody
+                            tr.text-info
+                                td 140000
+                                td Earn Points By Purchase
+                                td.text-center +10
+                                td.text-right 25/5/2018
+                            tr.text-danger
+                                td 140001
+                                td Credit Points Request Cashout
+                                td.text-center -10
+                                td.text-right 25/5/2018
+                            tr.text-info
+                                td 140000
+                                td Earn Points By Purchase
+                                td.text-center +10
+                                td.text-right 25/5/2018
+                            tr.text-danger
+                                td 140001
+                                td Credit Points Request Cashout
+                                td.text-center -10
+                                td.text-right 25/5/2018
+                            tr.text-info
+                                td 140000
+                                td Earn Points By Purchase
+                                td.text-center +10
+                                td.text-right 25/5/2018
+                            tr.text-danger
+                                td 140001
+                                td Credit Points Request Cashout
+                                td.text-center -10
+                                td.text-right 25/5/2018
+                            tr.text-info
+                                td 140000
+                                td Earn Points By Purchase
+                                td.text-center +10
+                                td.text-right 25/5/2018
+                            tr.text-danger
+                                td 140001
+                                td Credit Points Request Cashout
+                                td.text-center -10
+                                td.text-right 25/5/2018
+                .col-md-12
+                    nav(aria-label='Page navigation example')
+                        ul.pagination
+                            li.page-item
+                                a.page-link(href='#') Previous
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-item
+                                a.page-link(href='#') 2
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') Next
