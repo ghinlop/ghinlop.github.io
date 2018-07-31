@@ -1,0 +1,287 @@
+@import './inc/_mixin.scss';
+@import './inc/_var.scss';
+@import './inc/_global.scss';
+#header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: rgba($color: #fff, $alpha: 0.3);
+}
+a{
+  @include txt-color(#fff, #008848);
+}
+hr{
+  .success{
+    &::before, &::after{
+      border-color: #008848;
+    }
+  }
+}
+.gh-gradien-green-white{
+  background-image: linear-gradient(to bottom, #bcf5da, #fff)
+}
+.gh-text-effect{
+      font-size: 24pt;
+      color: transparent;
+      animation: text_effect 3s linear forwards;
+}
+@keyframes text_effect{
+  from{
+    text-shadow:
+        -1px -1px 50px #008848,  
+            1px -1px 50px #008848,
+            -1px 1px 50 #008848,
+            1px 1px 50 #008848;
+  }
+  to{
+    text-shadow:
+    -1px -1px 50px #008848,  
+        1px -1px 50 #008848,
+        -1px 1px 0 #008848,
+        1px 1px 0 #008848;
+  }
+}
+.gh-logo {
+  svg {
+    width: 200px;
+    height: auto;
+    .svg_effect {
+      animation: dash 5s linear forwards;
+      &:hover {
+        opacity: 1;
+        transition: .8s;
+      }
+    }
+    .ecogreen {
+      fill: none;
+      stroke: #008848;
+      stroke-width: 1;
+      stroke-miterlimit: 0;
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 0;
+      animation: ecogreen 3s linear forwards;
+    }
+    .saigon {
+      fill-opacity: .25;
+      stroke: #D48E2B;
+      stroke-width: 1;
+      stroke-miterlimit: 0;
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 0;
+      animation: saigon 3s linear forwards;
+    }
+  }
+}
+
+@keyframes saigon {
+  0% {
+    fill-opacity: 0.25;
+    stroke-dashoffset: 2000;
+  }
+  99% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-width: 0;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes ecogreen {
+  0% {
+    fill: transparent;
+    stroke-dashoffset: 2000;
+  }
+  99% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #008848;
+    stroke-width: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.gh-slider-item {
+  position: relative;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: block;
+  overflow: hidden;
+}
+
+.gh-cover-bg {
+  position: absolute;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center !important;
+  width: 100vw !important;
+  height: 100vh;
+}
+
+.gh-btn-trans {
+  background-color: rgba(0, 136, 72, 0.6);
+  color: #fff;
+  padding: 10px 15px;
+  outline: 1px solid  rgba(0, 136, 72, 0.6);
+  outline-offset: 5px;
+  @include effect;
+  &:hover {
+    color: #fff;
+    background-color: #008848;
+    outline-color: #008848;
+    outline: 3px solid #008848;
+    outline-offset: 0;
+  }
+}
+.gh-arrow-down{
+  animation: arrow-down 1s linear infinite;
+  opacity: 1;
+}
+.gh-box{
+  border: 3px solid rgba($color: #008848, $alpha: 0.1);
+  box-shadow: 0 0 30px rgba($color: #008848, $alpha: 0.3);
+  background-color: rgba($color: #008848, $alpha: 0.3);
+  color: #ffc739;
+}
+@keyframes arrow-down{
+  from{
+    color: #008848;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to{
+    color: #fff;
+    transform: translateY(50%);
+    opacity: .2;
+  }
+}
+.gh-menu-bar{
+  li{
+    a{
+      display: block;
+      @include txt-color(#333, #008848);
+      text-transform: uppercase;
+      padding: 8px 0;
+      border-bottom: 1px dotted #333;
+    }
+  }
+}
+.gh-social-icon{
+  a{
+    margin: 0 5px;
+    display: block;
+  }
+}
+.gh-phone{
+  .fa{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    &::before{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  span{
+    margin: 0;
+    @include txt-color(#fff, #ffc739);
+  }
+}
+.swiper-slide.swiper-slide-active .gh-slider-effect-right{
+  right: 0;
+}
+.gh-slider-effect-right{
+  position: absolute;
+  height: 100vh;
+  right: -100%;
+  top: 0;
+  min-width: 330px;
+  background-color: rgba(0, 136, 72, 0.3);
+  @include effect(right, 2s, linear);
+  >*{
+    color: #fff;
+  }
+  p{
+    padding: 5px 15px;
+    background-color: rgba($color: #000, $alpha: 0.5);
+    position: relative;
+    color: var(--light);
+    &::before, &::after{
+      content: '';
+      position: absolute;
+    }
+    &::before{
+      width: 10px;
+      height: 100%;
+      left: -10px;
+      top: 0;
+      background-color: rgba($color: #000, $alpha: .8); 
+    }
+    &::after{
+      width: 0;
+      height: 0;
+      top: -10px;
+      left: -10px;
+      border-top: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-right: 5px solid rgba($color: #000, $alpha: 1);
+      border-bottom: 5px solid rgba($color: #000, $alpha: 1);
+
+    }
+  }
+}
+footer{
+  position: fixed;
+  padding: 5px 0;
+  width: 100vw;
+  bottom:0;
+  left: 0;
+  background-color: rgba($color: #000, $alpha: 0.3);
+  box-shadow: -10px 0 50px 0 rgba(0,0,0,0.2);
+  z-index: 2000;
+  color: #fff;
+  >a{
+    color: #fff;
+  }
+}
